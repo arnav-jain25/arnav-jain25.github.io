@@ -1,0 +1,783 @@
+/* Colors */
+:root {
+    --main-bg-color: #1a2953;
+    --text-dark: #333333;
+    --text-light: #ffffff;
+    --text-secondary: #3a3a3a;
+    --label-color: #1a2953;
+}
+
+/* General Body Styling */
+body {
+    font-family: 'Helvetica', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #1a2953;
+}
+p {
+    color: #1a2953;
+}
+.navbar h1 {
+    white-space: nowrap;  /* Prevents line breaks */
+    font-size: 2rem;      /* Adjust size as needed to fit */
+    /* overflow: hidden;     Ensures text doesn't overflow the container */
+    text-align: center;   /* Centers text if needed */
+    margin: 0 auto;       /* Centers within the container */
+    display: inline-block; /* Allows control over spacing */
+}
+
+/* Navbar Styling */
+.navbar-custom {
+    background-color: white;
+    color: -var(--main-bg-color);
+    padding: 1rem 0px;
+}
+
+.navbar-custom .nav-link {
+    color: #fd5eb6 !important;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-right: 20px;
+    text-transform: uppercase;
+}
+
+.navbar-custom .nav-link:hover {
+    color: grey !important;
+}
+
+/* Header Section with Background Image (below navbar) */
+.header {
+    height: 400px;
+    background-color: #1a2953;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    margin-top: -1px; /* Ensures no gap between navbar and header */
+    z-index: 1;
+}
+
+.overlay {
+    background-color: #fd5eb6; /* Semi-transparent overlay for readability */
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-title {
+    color: #fd5eb6;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Profile Info Card Styling */
+.profile-card {
+    background-color: #ffffff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 0 0 0 10;
+    position: relative;
+    top: -300px;
+    margin-bottom: -50px;
+    max-width: 800px;
+    z-index: 2;
+}
+
+/* Profile Details Styling */
+.profile-details h2.name {
+    padding-left: 20px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fd5eb6;
+    margin-bottom: 0.3rem;
+}
+
+.profile-details h4.title {
+    padding-left: 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--label-color);
+    margin-bottom: 1rem;
+}
+
+.profile-details p {
+    padding-left: 20px;
+    font-size: 0.95rem;
+    margin: 0.4rem 0;
+    color: var(--text-secondary);
+}
+
+.profile-details .label {
+    font-weight: 600;
+    color: var(--label-color);
+    font-size: 1rem;
+}
+
+/* Profile Image Styling */
+.col-md-5.text-center {
+    position: relative;
+    height: 300px;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: none; /* Remove any border around the image */
+}
+
+.wrappingSM {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -300px;
+}
+
+/* Social Links Styling (below profile card) */
+.social-links {
+    text-align: center;
+    margin-top: 0.5rem;
+    background-color: var(--main-bg-color);
+    padding: 1rem 0;
+    /* border-radius: 0 0 8px 8px; */
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.social-links a {
+    color: var(--text-light);
+    font-size: 1.5rem;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: #ddd;
+}
+
+/* Additional Content Section */
+.additional-content {
+    text-align: center;
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.additional-content h2 {
+    font-size: 1.5rem;
+    color: #fd5eb6;
+    margin-bottom: 1rem;
+}
+
+.additional-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Clients Section Styling */
+.clients-section {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.clients-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fd5eb6; /* Consistent with main heading color */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.clients-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+
+.client-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 100%; /* Allows full width within each column */
+    margin-bottom: 20px;
+}
+
+/* Flex container for logo and name */
+.client-header {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center-align logo and name */
+    gap: 10px; /* Space between logo and name */
+}
+
+.client-logo {
+    width: 100px; /* Adjust size to match example */
+    height: auto;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.client-logo:hover {
+    opacity: 0.6;
+}
+
+/* Client Name Styling (as h4) */
+.client-name {
+    font-size: 1rem; /* Matches existing h4 font size */
+    font-weight: 700;
+    color: #1a2953;
+}
+
+/* Client Description Styling */
+.client-description {
+    font-size: 0.9rem; /* Consistent with paragraph styling */
+    color: #1a2953;
+    margin-top: 0px;
+    line-height: 1.4;
+}
+
+.section-divider {
+    border: 0;
+    height: 1.5px;
+    background-color: darkgrey; /* Adjust color if needed */
+    margin: 20px 0;
+    width: 100vw; /* Sets the line to span the full viewport width */
+    position: relative;
+    left: 50%; /* Center alignment for full-width line */
+    transform: translateX(-50%); /* Centers the line based on full width */
+}
+
+.wrappingExp {
+    background-color: #f7f7f7;
+    width: 100%;
+}
+.experience-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px 20px 30px 20px;
+    /* background-color: white; */
+}
+.experience-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    color: #fd5eb6;
+    margin-bottom: 40px;
+}
+.timeline {
+    position: relative;
+}
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background-color: #cccccc;
+    transform: translateX(-50%);
+}
+.timeline-item {
+    position: relative;
+    width: 80%; /* Increase width from 50% to 45% */
+    padding: 20px 30px; /* Adjust padding if necessary */
+    box-sizing: border-box;
+}
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background-color: #cccccc;
+    transform: translateX(-50%);
+}
+.timeline-item-left {
+    left: -30%;
+    text-align: right;
+}
+.timeline-item-left::before {
+    right: -20px;
+}
+.timeline-item-right {
+    left: 50%;
+    text-align: left;
+}
+.timeline-item-right::before {
+    left: -20px;
+}
+.timeline-year {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1a2953;
+}
+.timeline-role {
+    font-size: 16px;
+    font-weight: 500;
+    color: #23355f;
+}
+.timeline-company {
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 8px;
+    color: #fd5eb6;
+}
+.timeline-description {
+    font-size: 14px;
+    color: #666;
+    margin-top: 4px;
+    line-height: 1.6;
+}
+
+.skills-section {
+    background-color: #1a2953;
+    color: #ffffff;
+    text-align: center;
+    padding: 40px 20px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.skills-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.skill-item {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffffff;
+    /* border-radius: 5px; */
+    flex-basis: calc(50% - 10px); /* Each item takes half-width with some margin */
+    text-align: center;
+}
+
+.expertise-section {
+    background-color: #f7f7f7;
+    padding: 40px 20px;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.expertise-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fd5eb6;
+    margin-bottom: 20px;
+}
+
+.expertise-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.expertise-item {
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* border-radius: 5px; */
+    flex-basis: calc(25% - 20px); /* Each item takes one-quarter width with some margin */
+    height: 400px;
+    text-align: left;
+    color: #1a2953;
+    position: relative;
+}
+
+.expertise-item h3 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fd5eb6;
+    margin-bottom: 10px;
+}
+
+.expertise-item p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.icon-link {
+    font-size: 3rem; /* Adjust size as needed */
+    text-decoration: none;
+    margin-left: 8px; /* Space between GitHub and PDF icons */
+}
+
+.github-link {
+    position: absolute;
+    bottom: 10px;
+    right: 60px; /* Adjust this to position the GitHub icon a bit to the left */
+}
+
+.pdf-link {
+    position: absolute;
+    color: hwb(0 5% 12%);
+    bottom: 10px;
+    right: 15px; /* Positions the PDF icon just to the left of the GitHub icon */
+}
+
+.icon-link:hover {
+    color: #555; /* Change color on hover */
+}
+
+.github-link:hover {
+    color: #555; /* Change color on hover */
+}
+/* Contact */
+.wrappingContact {
+    background-color: #504e5251; /*Light gray background for the contact section */
+}
+
+/* Contact Section Styling */
+.contact-section {
+    padding: 60px 0px 0px;
+    text-align: left;
+    max-width: 100%;
+    position: relative;
+}
+
+/* Horizontal Line Across the Page */
+.contact-section::before {
+    content: "";
+    position: absolute;
+    top: 0; /* Position the line at the top of the contact section */
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #504e5251;
+}
+
+
+.contact-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1a2953;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.contact-form {
+    border-right: 1px solid #ffffff; /* Adds vertical line on the right of the form */
+    padding-right: 30px; /* Adds spacing to align the form content properly */
+    padding-left: 30px;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    padding-top: 10px;
+    padding-left: 30px;
+    margin-top: -20px;
+}
+
+.contact-info p {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+.contact-info .contact-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #1a2953;
+    margin-bottom: 5px;
+}
+
+.contact-info .contact-role {
+    font-size: 14px;
+    font-weight: 600;
+    color: #666;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.contact-info p {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+/* Form Control Styling */
+.form-control {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    padding: 10px 12px;
+    margin-bottom: 10px;
+}
+
+.submit-button {
+    background-color: #1a2953;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 30px;
+    border: none;
+    width: 100%;
+    max-width: 150px;
+    text-transform: uppercase;
+    margin-top: 15px;
+}
+
+.submit-button:hover {
+    background-color: #1a2953;
+}
+
+/* Social Icons Styling */
+.social-icons {
+    display: flex;
+    gap: 60px;
+    margin-top: 15px;    
+    padding-top: 10px;
+    padding-left: 5px;
+}
+
+.social-icons a {
+    color: #1a2953;
+    font-size: 48px; /* Increase font size for larger icons */
+    width: 40px; /* Set width if icons need to be uniform */
+    height: 40px; /* Set height for uniform sizing */
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icons a:hover {
+    color: #555;
+}
+
+/* Responsive Adjustments */
+@media (min-width: 768px) {
+    .contact-section {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .contact-form {
+        padding-right: 20px;
+    }
+
+    .contact-info {
+        padding-left: 20px;
+    }
+}
+
+/* Footer Copyright */
+.footer {
+    background-color: #1a2953; /* Light gray background for the footer */
+    padding-top: 40px;
+    padding-bottom: 15px;
+    position: relative;
+    text-align: center;
+}
+
+.footer-copyright {
+    font-size: 14px;
+}
+
+.footer-copyright p {
+    font-size: 14px;
+}
+
+.footer a {
+    color: #fd5eb6;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: white; /* Darker color on hover */
+    text-decoration: underline;
+}
+
+/* ---------------------------------------------------------------------------------------------- */
+
+/* Adjust for mobile */
+@media (min-width: 768px) {
+    .contact-section {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+}
+
+/* Responsive Adjustments */
+@media (min-width: 768px) {
+    .profile-card {
+        padding-right: 3rem;
+    }
+
+    .header-title {
+        font-size: 3rem;
+    }
+}
+
+.co-curricular-section {
+    padding: 40px 20px;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.co-curricular-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fd5eb6;
+    margin-bottom: 20px;
+}
+
+.co-curricular-timeline {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 100px 0; /* Adjust padding for spacing */
+}
+
+.co-curricular-timeline::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #1a2953;
+    z-index: 1;
+}
+
+.htimeline-item {
+    position: relative;
+    width: 25%;
+    text-align: center;
+    z-index: 2;
+}
+
+.timeline-item-top {
+    transform: translateY(-60px); /* Position above the line */
+}
+
+.timeline-item-bottom {
+    transform: translateY(60px); /* Position below the line */
+}
+
+.htimeline-year {
+    font-size: 16px;
+    font-weight: bold;
+    color: #1a2953;
+    margin-bottom: 5px;
+}
+
+.htimeline-description {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Co-curricular achievements list styling */
+.achievement-list-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 20px;
+    text-align: left;
+}
+
+.achievement-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.achievement-list li {
+    margin: 10px 0;
+    padding: 12px;
+    background-color: #f0f8ff;
+    border-left: 4px solid #fd5eb6;
+    color: var(--text-secondary);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.achievement-list li:hover {
+    transform: translateX(5px);
+}
+
+/* Left-aligned logo for timeline items on the left */
+.company-logo-left {
+    float: right;
+    margin-left: 10px;
+    width: 70px; /* Adjust size as needed */
+    height: auto;
+    border-radius: 50%;
+}
+
+/* Right-aligned logo for timeline items on the right */
+.company-logo-right {
+    float: left;
+    margin-right: 10px;
+    border-radius: 50%;
+    width: 70px; /* Adjust size as needed */
+    height: auto;
+}
+
+
+/* ------------------------------------------------------------------------------------------ */
+
+/* Base state for hidden sections */
+.fade-in-section {
+    opacity: 0;
+    transition: opacity 0.6s ease-out, transform 2s ease-out;
+    visibility: hidden;
+  }
+  
+  /* Scroll down animation */
+  .fade-in-down {
+    transform: translateX(100px); /* Offset position for downward animation */
+  }
+  
+  .fade-in-down.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: none; /* Reset transform to ensure alignment */
+  }
+  
+  /* Scroll up animation */
+  .fade-in-up {
+    transform: translateX(-100px); /* Offset position for upward animation */
+  }
+  
+  .fade-in-up.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: none; /* Reset transform to ensure alignment */
+  }  
+  
