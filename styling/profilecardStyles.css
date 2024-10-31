@@ -1,0 +1,114 @@
+/* Light teal background using :before */
+.id-card::before {
+    content: '';
+    position: absolute;
+    top: -150px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw; /* Full width of the viewport */
+    height: 425px; /* Height extended to cover the card contents */
+    background-color: #e0f2f1; 
+    z-index: -1; /* Places it behind the profile card */
+    border-radius: 0; /* Keeps the background rectangular */
+}
+
+/* Profile Image */
+.profile-image {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    /* border: 3px solid #00897B; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: -1rem;
+}
+
+/* Text Styling */
+.id-card h2 {
+    font-size: 1.5rem; /* Larger name font */
+    color: #563692;
+    margin: 0.5rem 0;
+}
+
+.id-card h4 {
+    font-size: 1.1rem; /* Increased subtitle font size */
+    margin: 0.3rem 0;
+    color: #7047bb;
+    font-weight: 500;
+}
+
+/* University Info */
+.id-card p {
+    font-size: 1rem; /* Smaller but readable */
+    color: #FF7043;
+    margin-bottom: 1.5rem;
+}
+
+/* Profile Card Container */
+.id-card {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    margin: 0 auto;
+    margin-top: -100px; /* Adjust for overlap */
+    padding-top: 2rem;
+    /* border: 2px solid #00897B; */
+    border-radius: 50%; /* Keeps the card circular */
+    background-color: #ffffff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: #00897B;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 2; /* Keeps it on top */
+}
+
+/* Positioning for the left and right buttons */
+.button-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1000px; /* Adjusts width for alignment */
+    margin: 0 auto;
+    margin-top: -175px; /* Adjusts the button alignment with the profile card */
+    z-index: 2;
+}
+
+/* Styling for the Contact Buttons */
+.contact-button {
+    width: 200px; /* Larger button size */
+    height: 200px;
+    /* background-color: #B39DDB; */
+    background: linear-gradient(135deg, #B39DDB, #CDC3E7, #A288D1);
+    color: #e0f2f1;
+    border: none;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem; /* Larger icon size */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    /* border: 3px solid #00897B; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+.contact-button:hover {
+    background: linear-gradient(135deg, #FF7043, #F9A825, #FFA046);
+    /* color: #B39DDB; */
+}
+
+.id-card-footer a {
+    font-size: 2rem;
+    color: #FF7043;
+}
+
+.id-card-footer a:hover {
+    font-size: 2rem;
+    color: #B39DDB;
+}
