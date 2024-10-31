@@ -1,0 +1,42 @@
+.skills-section {
+    background: linear-gradient(160deg, #B39DDB, #A288D1,#CDC3E7);
+    /* color: #B2DFDB; */
+    text-align: center;
+    padding: 40px 20px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.skills-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #563692;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+
+.skills-row {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr); /* Four columns layout */
+    gap: 40px; /* Space between skill boxes */
+}
+
+.skill-box {
+    color: white;
+    text-align: center;
+    padding: 15px 30px 15px 30px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.skill-icon {
+    width: 50px;  /* Adjust size as needed */
+    height: auto;
+    display: block;
+    margin: auto;
+}
