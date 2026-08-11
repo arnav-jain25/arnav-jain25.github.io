@@ -24,7 +24,7 @@ export const caseStudies: CaseStudy[] = [
     summary:
       "Multi-step LangGraph orchestration with human approval gates placed at every irreversible decision.",
     problem:
-      "Enterprise bidding is high-stakes and slow: teams have to pull signals from procurement platforms, CRM history, and internal documents, then make a judgment call on whether and how to bid — all under deadline pressure where a wrong automated move, an early submission, a bad number, can't be undone.",
+      "Enterprise bidding is high-stakes and slow: teams have to pull signals from procurement platforms, CRM history, and internal documents, then make a judgment call on whether and how to bid, under deadline pressure where a wrong automated move, an early submission, a bad number, can't be undone.",
     decision:
       "Let the agent do the research and drafting work continuously, but stop and surface a review screen at every step that can't be reversed, before a bid figure is finalized, before anything goes out. The system explains why it's recommending a decision, not just what the decision is, so review takes seconds instead of requiring the reviewer to redo the research themselves.",
     architecture:
@@ -34,11 +34,29 @@ export const caseStudies: CaseStudy[] = [
     stack: ["LangGraph", "GPT-4o", "Gemini 2.5 Pro", "FastAPI", "React", "TypeScript"],
   },
   {
-    id: "agentic-legal-assistant",
+    id: "incident-response-agent",
     discipline: "ai",
     org: "xAI",
     year: "2025",
-    title: "Agentic legal assistant",
+    title: "Security incident-response agent",
+    summary:
+      "The agent investigates an anomaly, calls tools, and proposes an action inside a conversation-first workspace.",
+    problem:
+      "Security operations work is triage under time pressure: an anomaly fires, and an analyst has to pull context from half a dozen tools, form a theory about what happened, and decide whether it warrants action. The same investigative loop, dozens of times a shift, mostly on alerts that turn out to be nothing.",
+    decision:
+      "Let the agent run the investigative loop and arrive with a hypothesis already backed by evidence, but never let it act on its own. The analyst's job shifts from gathering to judging, which only works if every claim the agent makes is traceable to the tool call that produced it. So the workspace is conversation-first, with the evidence trail attached rather than summarized away.",
+    architecture:
+      "An agent that executes tool calls against telemetry and enrichment sources, accumulates evidence into a structured hypothesis, and proposes a next action for review. Python and FastAPI services behind it; a React and TypeScript workspace that renders the investigation as a conversation with its evidence inline, built end to end.",
+    shipped:
+      "A working incident-response platform where analysts review reasoning instead of assembling it, processing incidents roughly 20% faster than the prior workflow.",
+    stack: ["Agentic tool calling", "FastAPI", "Python", "React", "TypeScript"],
+  },
+  {
+    id: "agentic-legal-assistant",
+    discipline: "ai",
+    org: "Independent project",
+    year: "2026",
+    title: "Paralegal agentic AI platform",
     summary:
       "Sensitive entities masked before the model ever sees them, with answers grounded in domain documents.",
     problem:
@@ -46,44 +64,27 @@ export const caseStudies: CaseStudy[] = [
     decision:
       "Mask sensitive entities before anything reaches the model, so privacy isn't a policy promise, it's structurally true of the pipeline. Ground every claim in retrieved source documents rather than model memory, so a user can trace an answer back to the passage it came from instead of taking it on faith.",
     architecture:
-      "LangChain-orchestrated multi-step reasoning, NER-based masking as a pre-processing stage ahead of any model call, and retrieval-augmented generation over a domain document corpus. Python and FastAPI backend; a React and TypeScript interface built to surface the multi-step reasoning and citations rather than hide them behind a single chat bubble.",
+      "LangChain-orchestrated multi-step reasoning over Gemini and Grok, NER-based entity extraction and masking as a pre-processing stage ahead of any model call, and retrieval-augmented generation over a domain document corpus using vector embeddings and semantic search. Python and FastAPI services handle ingestion, chunking, retrieval, and inference; a React and TypeScript interface surfaces the multi-step reasoning and citations rather than hiding them behind a single chat bubble.",
     shipped:
       "A production conversational assistant for legal workflows that reasons across multiple steps while keeping sensitive data out of the model path entirely.",
-    stack: ["LangChain", "NER masking", "RAG", "FastAPI", "React", "TypeScript"],
+    stack: ["LangChain", "Gemini", "Grok", "NER masking", "RAG", "FastAPI", "React"],
   },
   {
     id: "knowledge-assistant",
     discipline: "frontend",
-    org: "xAI",
+    org: "Independent project",
     year: "2025",
-    title: "Citation-backed knowledge assistant",
+    title: "Scholar Assistant",
     summary: "Hybrid vector and keyword retrieval, with an interface that shows its sources by default.",
     problem:
       "A knowledge assistant that answers confidently but can't show its work isn't trustworthy enough to actually use for anything that matters, and pure vector search alone tends to miss exact-match queries, names, IDs, specific terms, that keyword search catches easily.",
     decision:
       "Show sources by default, not behind a sources toggle a user has to think to click. If the answer can't be traced to something retrieved, that's a signal the interface should surface, not smooth over.",
     architecture:
-      "Hybrid retrieval combining ChromaDB vector search with keyword search, so semantic and exact-match queries both land. Python and FastAPI backend; React and TypeScript frontend that renders citations inline with the answer.",
+      "A multi-turn conversational assistant on Gemini 2.5 Flash, with hybrid retrieval combining ChromaDB vector search and keyword search so semantic and exact-match queries both land, and iterative prompt evaluation tightening grounding and consistency across a corpus of religious scriptures. Python and FastAPI backend; React and TypeScript frontend that renders citations inline with the answer.",
     shipped:
-      "A production knowledge assistant where every answer arrives with its sources attached, built to be checked rather than trusted blindly.",
-    stack: ["ChromaDB", "Hybrid retrieval", "FastAPI", "React", "TypeScript"],
-  },
-  {
-    id: "evaluation-framework",
-    discipline: "platform",
-    org: "xAI",
-    year: "2025",
-    title: "LLM evaluation framework",
-    summary: "A working taxonomy of how multi-turn conversations break, and the datasets built to catch it.",
-    problem:
-      "“The model seems worse at X” isn't actionable without a way to say precisely where multi-turn conversations break, ambiguity, lost context, unsupported claims, failed intent recognition, and without a repeatable way to measure it before and after a change.",
-    decision:
-      "Treat evaluation as a product surface, not a one-off script. Build a shared vocabulary for failure modes so an evaluator, a prompt engineer, and a researcher can point at the same transcript and agree on what went wrong.",
-    architecture:
-      "Evaluation datasets and testing frameworks measuring response quality, factual grounding, hallucination rate, and task completion across multi-step planning and tool-use scenarios. A working taxonomy of interaction-level failure modes, ambiguity, failed intents, context loss, unsupported responses, built from analyzing human-AI transcripts, feeding back into prompt and model improvements documented as guidelines for other teams.",
-    shipped:
-      "A reusable evaluation methodology and failure taxonomy adopted across teams, not a single product, proof of systems thinking rather than a shipped screen.",
-    stack: ["Evaluation datasets", "Failure taxonomy", "Prompt engineering"],
+      "A conversational assistant where every answer arrives with its sources attached, built to be checked rather than trusted blindly.",
+    stack: ["Gemini 2.5 Flash", "ChromaDB", "Hybrid retrieval", "FastAPI", "React"],
   },
 ];
 

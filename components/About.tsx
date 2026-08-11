@@ -22,12 +22,12 @@ export default function About() {
               afternoon, and I think those are the same argument.
             </p>
             <p>
-              Most of my work now lives in regulated, high-stakes workflows — bids, contracts,
-              legal documents — where an AI system has to be transparent enough that a person will
+              Most of my work now lives in regulated, high-stakes workflows (bids, contracts,
+              legal documents) where an AI system has to be transparent enough that a person will
               actually sign off on what it produced. Making that legible is a design problem at
               least as much as an engineering one.
             </p>
-            <p>Outside of work I sing, mostly Hindustani classical, occasionally in front of people.</p>
+            <p>Outside of work I love to sing, write songs, dance, and play badminton!</p>
           </div>
 
           <div className="about-side" data-reveal>

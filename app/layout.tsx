@@ -25,9 +25,9 @@ const mono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Arnav Jain — Senior AI Engineer",
+  title: "Arnav Jain — Senior AI Full Stack Engineer",
   description:
-    "I build the surfaces where people and AI agents meet — agentic systems in LangGraph and LangChain, and the React interfaces that make them reviewable.",
+    "I build AI Systems and Applications that can transform the way you operate.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

@@ -28,16 +28,16 @@ export const experience: ExperienceItem[] = [
     org: "Celnet",
     monogram: "Ce",
     logo: "/logos/celnet.svg",
-    role: "Senior AI Engineer",
+    role: "Senior AI Full Stack Engineer",
     location: "Alpharetta, GA",
     description:
-      "Architected an enterprise bid intelligence platform on LangGraph — structured tool calling, retrieval, business-rule validation, stateful orchestration — then built the React interface where users review and intervene at the decisions that matter.",
+      "Architected an enterprise bid intelligence platform on LangGraph (structured tool calling, retrieval, business-rule validation, stateful orchestration), then built the React interface where users review and intervene at the decisions that matter. Bid opportunity intake improved 10–12%.",
     chips: ["LangGraph", "GPT-4o", "Gemini 2.5 Pro", "FastAPI", "React · TypeScript"],
   },
   {
     id: "xai",
     discipline: "ai",
-    dateRange: "Jan 2025 — Dec 2025 · 1 yr",
+    dateRange: "Feb 2025 — Dec 2025 · 11 mo",
     org: "xAI",
     monogram: "xAI",
     monogramCompact: true,
@@ -45,8 +45,8 @@ export const experience: ExperienceItem[] = [
     role: "AI Engineer, LLM Evaluation",
     location: "Seattle, WA",
     description:
-      "Evaluated model behaviour across long multi-turn conversations and built the datasets and frameworks to measure grounding, hallucination, and task completion. Shipped two conversational platforms end to end.",
-    chips: ["LangChain", "ChromaDB", "RAG", "Prompt engineering"],
+      "Evaluated model behaviour across long multi-turn conversations and built the datasets and frameworks to measure grounding, hallucination, and task completion. Also built an agentic incident-response platform for security operations end to end (FastAPI services and React interface), processing incidents roughly 20% faster.",
+    chips: ["LangChain", "Prompt engineering", "LLM evaluation", "FastAPI", "React · TypeScript"],
   },
   {
     id: "wsu",
@@ -59,46 +59,21 @@ export const experience: ExperienceItem[] = [
     role: "Full Stack Engineer, AI & Analytics",
     location: "Pullman, WA",
     description:
-      "Built client-facing analytics interfaces in React and the Python microservices behind them — interactive data views over AI-generated output, wired to FastAPI through asynchronous retrieval.",
+      "Built client-facing analytics interfaces in React and the Python microservices behind them: interactive data views over AI-generated output, wired to FastAPI through asynchronous retrieval. Also built NLP preprocessing pipelines covering tokenization, normalization, and feature extraction, with structured logging and fault-tolerant processing throughout.",
     chips: ["React", "FastAPI", "NLP pipelines", "Microservices"],
   },
   {
     id: "deloitte",
     discipline: "frontend",
-    dateRange: "Mar 2021 — Dec 2022 · 1 yr 10 mo",
+    dateRange: "Sep 2020 — Dec 2022 · 2 yrs 4 mo",
     org: "Deloitte",
     monogram: "De",
     logo: "/logos/deloitte.svg",
-    role: "Frontend Developer, B2B",
+    role: "Software Engineer, Full Stack (B2B)",
     location: "India",
     description:
-      "Turned Figma wireframes into production interfaces across multiple modules, working directly with UI/UX designers on layout, interaction behaviour, and usability. Cut load time roughly 10% through lazy loading, code splitting, and caching.",
+      "Turned Figma wireframes into production B2B interfaces across multiple modules in React and TypeScript, built on reusable component patterns and integrated with REST APIs through async workflows. Improved application responsiveness by roughly 10% through lazy loading, code splitting, and caching, with Cypress coverage over the critical paths.",
     chips: ["React · TypeScript", "Figma", "Design systems", "Cypress"],
-  },
-  {
-    id: "cogent",
-    discipline: "frontend",
-    dateRange: "Dec 2020 — Mar 2021 · 4 mo",
-    org: "Cogent Technocom",
-    monogram: "Co",
-    role: "Full Stack Engineer",
-    location: "India",
-    description:
-      "Built a real-time quiz application on Microsoft Kaizala, with WebSocket pipelines pushing instant UI updates and reusable state patterns that sped up delivery across the team.",
-    chips: ["React", "WebSockets", "Redux"],
-  },
-  {
-    id: "smartknower",
-    discipline: "ai",
-    dateRange: "Sep 2020 — Nov 2020 · 3 mo",
-    org: "SmartKnower",
-    monogram: "SK",
-    logo: "/logos/smartknower.svg",
-    role: "Machine Learning Intern",
-    location: "India",
-    description:
-      "Where it started — image classification and sentiment models served through Flask APIs and visualised in React dashboards. The pairing has followed me ever since.",
-    chips: ["Scikit-learn", "Flask", "NLP"],
   },
 ];
 
@@ -122,26 +97,26 @@ export const work: WorkItem[] = [
   {
     id: "agentic-legal-assistant",
     discipline: "ai",
-    year: "2025",
-    title: "Agentic legal assistant",
+    year: "2026",
+    title: "Paralegal agentic AI platform",
     description:
       "Sensitive entities masked before the model ever sees them, with answers grounded in domain documents.",
+  },
+  {
+    id: "incident-response-agent",
+    discipline: "ai",
+    year: "2025",
+    title: "Security incident-response agent",
+    description:
+      "The agent investigates an anomaly, calls tools, and proposes an action inside a conversation-first workspace.",
   },
   {
     id: "knowledge-assistant",
     discipline: "frontend",
     year: "2025",
-    title: "Citation-backed knowledge assistant",
+    title: "Scholar Assistant",
     description:
       "Hybrid vector and keyword retrieval, with an interface that shows its sources by default.",
-  },
-  {
-    id: "evaluation-framework",
-    discipline: "platform",
-    year: "2025",
-    title: "LLM evaluation framework",
-    description:
-      "A working taxonomy of how multi-turn conversations break, and the datasets built to catch it.",
   },
 ];
 
@@ -202,31 +177,37 @@ export const capabilities: Capability[] = [
     id: "genai",
     discipline: "ai",
     label: "Generative AI & LLM engineering",
-    text: "Prompt engineering, LLM evaluation, response grounding, hallucination detection and mitigation, retrieval-augmented generation.",
+    text: "GPT, Gemini, Grok, Claude. Prompt engineering, LLM evaluation, contextual reasoning, response grounding, hallucination detection and mitigation, retrieval-augmented generation.",
   },
   {
     id: "frameworks",
     discipline: "ai",
     label: "Frameworks",
-    text: "LangChain, LangGraph, CrewAI, Hugging Face, PyTorch, TensorFlow, scikit-learn.",
+    text: "LangChain, LangGraph, CrewAI, Hugging Face, PyTorch, TensorFlow, scikit-learn, NumPy, pandas.",
   },
   {
     id: "frontend",
     discipline: "frontend",
     label: "Frontend",
-    text: "React, TypeScript, component architecture, state management, responsive interfaces, Figma, design systems.",
+    text: "React, TypeScript, component architecture, state management, responsive interfaces, REST integration.",
+  },
+  {
+    id: "design",
+    discipline: "frontend",
+    label: "Product design",
+    text: "User journey mapping, explainable AI interactions, Figma, design systems.",
   },
   {
     id: "backend",
     discipline: "platform",
     label: "Backend & knowledge systems",
-    text: "Python, FastAPI, REST and JSON APIs, async processing, ChromaDB, Pinecone, FAISS, MongoDB, semantic search, chunking, reranking.",
+    text: "Python, FastAPI, Flask, Node.js, Express, REST and JSON APIs, microservices, async and event-driven processing, ChromaDB, Pinecone, FAISS, MongoDB, semantic search, chunking, reranking.",
   },
   {
     id: "cloud",
     discipline: "platform",
     label: "Cloud & tooling",
-    text: "AWS, Docker, Git, Postman, Claude Code, Cursor.",
+    text: "AWS, Docker, Git, Postman, Claude Code, Cursor, Codex.",
   },
 ];
 
@@ -245,13 +226,16 @@ export const education: Education[] = [
     logo: "/logos/wsu.svg",
   },
   {
+    label: "Education",
     degree: "B.Tech. Computer & Communication Engineering",
     org: "Manipal Institute of Technology",
+    logo: "/logos/mit.svg",
   },
 ];
 
 export const certifications = [
   "AI Proficiency & Claude 101 — Anthropic",
   "Building RAG Agents with LLMs — NVIDIA",
+  "LLMs & Agentic AI — LinkedIn Learning",
   "AWS Certified Cloud Practitioner",
 ];

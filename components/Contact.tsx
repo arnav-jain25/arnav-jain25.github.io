@@ -5,11 +5,11 @@ export default function Contact() {
     <section className="contact" id="contact">
       <div className="shell">
         <span className="eyebrow" data-reveal>
-          Open to senior AI engineering roles
+          Would love to work on building more impactful AI-powered Applications
         </span>
         <h2 data-reveal>
           If you are building something where people and agents have to work together, I would
-          like to hear about it.
+          like to know more about it.
         </h2>
         <div className="contact-links" data-reveal>
           <a className="btn" href="mailto:arnav.jaina25@gmail.com">
