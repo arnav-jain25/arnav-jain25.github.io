@@ -12,7 +12,7 @@ export default function Work() {
             <i style={{ "--dot": "var(--ultra)" } as CSSProperties} />
             Selected work
           </h2>
-          <span className="eyebrow">02 — Four case studies</span>
+          <span className="eyebrow">02 — Case Studies</span>
         </div>
 
         <div className="work-list">

@@ -4,13 +4,13 @@ import Image from "next/image";
 const WORDS: { text: string; accent?: boolean }[] = [
   { text: "I" },
   { text: "build" },
-  { text: "the" },
-  { text: "surfaces" },
-  { text: "where" },
-  { text: "people" },
-  { text: "and" },
-  { text: "AI agents", accent: true },
-  { text: "meet." },
+  { text: "AI applications", accent: true },
+  { text: "that" },
+  { text: "can" },
+  { text: "transform" },
+  { text: "the way" },
+  { text: "you" },
+  { text: "work.", accent: true },
 ];
 
 export default function Hero() {
@@ -18,7 +18,7 @@ export default function Hero() {
     <header className="hero" id="top">
       <div className="shell">
         <span className="eyebrow" data-reveal>
-          Senior AI Engineer · Atlanta Metro, GA
+          Senior AI Full Stack Engineer · Atlanta Metro, GA
         </span>
         <h1>
           {WORDS.map((w, i) => (
@@ -35,9 +35,7 @@ export default function Hero() {
         <div className="hero-foot">
           <div className="hero-left">
             <p className="hero-sub" data-reveal>
-              Five years across two disciplines that rarely share a desk: agentic systems in
-              LangGraph and LangChain, and the React interfaces that let a person review, approve,
-              and override what those systems decide.
+              Full-stack AI engineer specializing in agentic systems and the interfaces that keep them explainable. Six years across application development, full-stack engineer, Agentic AI, RAG, and more! 
             </p>
             <div className="hero-actions" data-reveal>
               <a className="btn" href="#experience">
